@@ -13,18 +13,39 @@
         <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
         <script src="js/jquery-1.7.1.js"></script>
         <script src="js/jquery.autocomplete.js"></script>
+        <style type="text/css">
+            *{
+                font-family: Arial;
+                font-size: 13px;
+            }
+            body{
+                background-color: #F0F0F0;               
+            }
+            #nomepais{
+                width: 300px;
+                height: 30px;
+            }
+            #conteudo{
+            }
+            #conteudo h1{
+                font-size: 33px;
+                text-shadow: 1px 1px 0 #FFFFFF;
+            }
+        </style>
     </head>
     <body>
-        <input type ="text" name ="txtnomepais" id ="nomepais"/>
+        <div id ="conteudo">
+            <h1>Auto complete com Jquery e Jsp</h1>
+            <input type ="text" name ="txtnomepais" id ="nomepais"/>
+        </div>
+        
         <script>
-$().ready(function() {
- 
-$("#nomepais").autocomplete("getdados.jsp", {
-width: 440,
-scrollHeight: 220,
-selectFirst: true
-});
-})
+            $().ready(function() {
+                $("#nomepais").autocomplete("getdados.jsp", {
+                width: 303,
+                scrollHeight: 220
+                });
+            })
         </script>
     </body>
 </html>
